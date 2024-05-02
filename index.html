@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="assets/javascript_logo.png" type="image/png">
+    <title>Javascript Practice</title>
+</head>
+<body>
+    <!-- Welcome -->
+    <h1 id="welcome">Welcome</h1>
+    <label for="">Username</label> <br>
+    <input type="text" id="username"> <br> <br>
+    <button id="submit">Login</button>
+    <br> <br> <hr>
+
+    <!-- Area Calculator -->
+    <h3 id="area">Area Calculator</h3>
+    <label for="">Length</label> <br>
+    <input type="text" id="length"> <br> <br>
+    <label for="">Width</label> <br>
+    <input type="text" id="width"> <br> <br>
+    <button type="button" id="areaButton">Calculate</button>
+    <br> <br> <hr>
+
+    <!-- Celsisus to Fahrenheit to Celsius -->
+    <h3 id="tempTitle"></h3>
+    <label">
+        <input type="radio" id="ctf" value="ctf" name="temp" checked> Celsius to Fahrenheit
+    </label>
+    <br>
+    <label">
+        <input type="radio" id="ftc" value="ftc" name="temp"> Fahrenheit to Celsius
+    </label>
+    <br> <br>
+    <label id="tempLabel"></label> <br>
+    <input type="text" id="tempInput">
+    <button type="button" id="tempButton">Convert</button>
+    <br> <br> <hr>
+
+    <!-- Counter -->
+    <h3 id="counterTitle"></h3>
+    <span class="counter-buttons">
+        <button id="decreaseButton">Decrease</button>
+        <button id="resetButton">Reset</button>
+        <button id="increaseButton">Increase</button>
+    </span>
+    <br> <br> <hr>
+
+    <!-- Random Whole Number Generator -->
+    <h3 id="numberGeneratorTitle">Random Whole Number Generator</h3>
+    <label for="">Minimum Number</label> <br>
+    <input type="text" id="minimumNumber"> <br> <br>
+    <label for="">Maximum Number</label> <br>
+    <input type="text" id="maximumNumber"> <br> <br>
+    <button id="numberGeneratorButton">Generate Number</button>
+    <br> <br> <hr>
+
+    <!-- Two of a Kind -->
+    <h3 id="diceTitle">Two of a Kind</h3>
+    <button id="diceRollerButton">Roll Dice</button> <br> <br>
+    <label for="" id="diceScore">Score: 0</label>
+    <span id="dicePlus"></span>
+
+    <footer>
+        <br> <br>
+        <span class="credits">Christian G. Canturias &middot; &copy; 2024</span>
+    </footer>
+    
+    <script src="/index.js"></script>
+</body>
+</html>

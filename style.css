@@ -1,0 +1,42 @@
+body {
+    margin-left: 12px;
+    font-family: Lexend;
+    font-size: 1em;
+}
+
+input {
+    background-color: lightgray;
+    
+}
+
+label {
+    font-weight: 700;
+}
+
+button {
+    cursor: pointer;
+}
+
+.counter-buttons > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 1px black solid;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 8px 14px;
+    transition: background-color 0.25s;
+}
+.counter-buttons > button:hover {
+    background-color: rgb(55, 124, 252);
+}
+
+#dicePlus {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.credits {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+}
