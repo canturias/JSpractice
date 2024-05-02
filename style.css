@@ -1,6 +1,11 @@
+@font-face {
+    src: url(fonts/Lexend-VariableFont_wght.ttf);
+    font-family: Lexend;
+}
+
 body {
     margin-left: 12px;
-    font-family: Lexend;
+    font-family: Lexend, Helvetica, Arial;
     font-size: 1em;
 }
 
