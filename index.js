@@ -89,7 +89,8 @@ resetButton.onclick = function() {
 }
 
 // Random Whole Number Generator
-let minimumNumber, maximumNumber;
+let minimumNumber = 1;
+let maximumNumber = 100;
 
 document.getElementById("minimumNumber").addEventListener("change", checkMinimumNumber);
 document.getElementById("maximumNumber").addEventListener("change", checkMaximumNumber);
