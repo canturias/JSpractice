@@ -10,82 +10,100 @@
     <title>Javascript Practice</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome</h1>
-    </header>
-    <main> <hr>
-        <!-- Login -->
-        <section tabindex="0" id="login">
-            <h3 id="loginTitle">Login</h3>
-            <label for="">Username</label> <br>
-            <input type="text" id="username"> <br> <br>
-            <button type="submit" id="submit">Login</button>
-            <br> <br>
-        </section> <hr>
-
-        <!-- Area Calculator -->
-        <section tabindex="0" id="area-calculator">
-            <h3 id="area">Area Calculator</h3>
-            <label for="">Length</label> <br>
-            <input type="number" id="length"> <br> <br>
-            <label for="">Width</label> <br>
-            <input type="number" id="width"> <br> <br>
-            <button type="button" id="areaButton">Calculate</button>
-            <br> <br>
-        </section> <hr>
-
-        <!-- Temperature Converter -->
-        <section tabindex="0" id="temperature-converter">
-            <h3 id="tempTitle"></h3>
-            <label for="ctf">
-                <input type="radio" id="ctf" value="ctf" name="temp" checked> Celsius to Fahrenheit
-            </label>
-            <br>
-            <label for="ftc">
-                <input type="radio" id="ftc" value="ftc" name="temp"> Fahrenheit to Celsius
-            </label>
-            <br> <br>
-            <label id="tempLabel"></label> <br>
-            <input type="number" id="tempInput" placeholder="\u00B0C">
-            <br> <br>
-            <button type="button" id="tempButton">Convert</button>
-            <br> <br>
-        </section> <hr>
-
-        <!-- Counter -->
-        <section tabindex="0" id="counter">
-            <h3 id="counterTitle"></h3>
-            <span class="counter-buttons">
-                <button id="decreaseButton">–</button>
-                <button id="resetButton">0</button>
-                <button id="increaseButton">+</button>
-            </span>
-            <br> <br>
-        </section> <hr>
-
-        <!-- Random Whole Number Generator -->
-        <section tabindex="0" id="number-generator">
-            <h3 id="numberGeneratorTitle">Random Whole Number Generator</h3>
-            <label for="">Minimum Number</label> <br>
-            <input type="number" id="minimumNumber" value="1"> <br> <br>
-            <label for="">Maximum Number</label> <br>
-            <input type="number" id="maximumNumber" value="100"> <br> <br>
-            <button id="numberGeneratorButton">Generate Number</button>   
-            <br> <br>
-        </section> <hr>
-        
-        <!-- Two of a Kind -->
-        <section tabindex="0" id="two-of-a-kind">
-            <h3 id="diceTitle">Two of a Kind</h3>
-            <button id="diceRollerButton">Roll Dice</button> <br> <br>
-            <label for="" id="diceScore">Score: 0</label>
-            <span id="dicePlus"></span>
-        </section>
-    </main>
-    <footer>
-        <span class="credits">Canturias &middot; &copy; 2024</span>
-    </footer>
+    <div class="shield">
+        <div class="container">
+            <header>
+                <h1 class="welcome" id="welcome">Welcome</h1>
+            </header>
+            <main> <hr id="loginLine">
+                <!-- Login -->
+                <section tabindex="0" id="login">
+                    <h3 id="loginTitle">Login</h3>
+                    <label for="">Username</label> <br>
+                    <input type="text" id="username"> <br> <br>
+                    <button type="submit" id="submit">Login</button>
+                    <br> <br>
+                </section>
     
-    <script src="index.js"></script>
+                <div class="toggle" id="toggle"> <hr>
+                    <!-- Area Calculator -->
+                <section tabindex="0" id="area-calculator">
+                    <h3 id="area">Area Calculator</h3>
+                    <h2 id="area-result">0</h2>
+                    <label for="">Length</label> <br>
+                    <input type="number" id="length"> <br> <br>
+                    <label for="">Width</label> <br>
+                    <input type="number" id="width"> <br> <br>
+                    <button type="button" id="areaButton">Calculate</button>
+                    <br> <br>
+                </section> <hr>
+        
+                <!-- Temperature Converter -->
+                <section tabindex="0" id="temperature-converter">
+                    <h3 id="tempTitle"></h3>
+                    <label for="ctf">
+                        <input type="radio" id="ctf" value="ctf" name="temp" checked> Celsius to Fahrenheit
+                    </label>
+                    <br>
+                    <label for="ftc">
+                        <input type="radio" id="ftc" value="ftc" name="temp"> Fahrenheit to Celsius
+                    </label>
+                    <br> <br>
+                    <label id="tempLabel"></label> <br>
+                    <input type="number" id="tempInput" placeholder="\u00B0C">
+                    <br> <br>
+                    <button type="button" id="tempButton">Convert</button>
+                    <br> <br>
+                </section> <hr>
+        
+                <!-- Counter -->
+                <section tabindex="0" id="counter">
+                    <h3 id="counterTitle"></h3>
+                    <span class="counter-buttons">
+                        <button id="decreaseButton">–</button>
+                        <button id="resetButton">0</button>
+                        <button id="increaseButton">+</button>
+                    </span>
+                    <br> <br>
+                </section> <hr>
+        
+                <!-- Random Whole Number Generator -->
+                <section tabindex="0" id="number-generator">
+                    <h3 id="numberGeneratorTitle">Random Whole Number Generator</h3>
+                    <label for="">Minimum Number</label> <br>
+                    <input type="number" id="minimumNumber" value="1"> <br> <br>
+                    <label for="">Maximum Number</label> <br>
+                    <input type="number" id="maximumNumber" value="100"> <br> <br>
+                    <button id="numberGeneratorButton">Generate Number</button>   
+                    <br> <br>
+                </section> <hr>
+                
+                <!-- Two of a Kind -->
+                <section tabindex="0" id="two-of-a-kind">
+                    <h3 id="diceTitle">Two of a Kind</h3>
+                    <button id="diceRollerButton">Roll Dice</button> <br> <br>
+                    <label for="" id="diceScore">Score: 0</label>
+                    <span id="dicePlus"></span>
+                </section>
+                </div>
+            </main>
+        </div>
+        <div class="content"></div>
+        <footer>
+            <span class="credits">
+                <a class="facebook-link" target="_blank" href="https://facebook.com/canturiaschristian">
+                    Canturias
+                </a> &middot; &copy; 2024
+            </span>
+        </footer>
+    </div>
+    
+    <script type="module" src="index.js"></script>
+    <script type="module" src="/javascript/login.js"></script>
+    <script type="module" src="/javascript/area_calculator.js"></script>
+    <script type="module" src="/javascript/temperature.js"></script>
+    <script type="module" src="/javascript/counter.js"></script>
+    <script type="module" src="/javascript/random_number.js"></script>
+    <script type="module" src="/javascript/two_of_a_kind.js"></script>
 </body>
 </html>

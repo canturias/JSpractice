@@ -3,6 +3,10 @@
     font-family: Lexend;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-image: url(pictures/background.png);
     margin: 0;
@@ -11,11 +15,33 @@ body {
     text-align: center;
 }
 
+.shield {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.content {
+    flex: 1;
+}
+  
+.welcome {
+    margin: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 main {
     padding: 12px;
     margin-left: auto;
     margin-right: auto;
     max-width: 480px;
+    min-width: fit-content;
 }
 
 hr {
@@ -28,6 +54,11 @@ hr {
 section {
     padding: 12px;
     margin: 0;
+    max-width: 480px;
+}
+
+h2 {
+    margin-top: 0;
 }
 
 h3 {
@@ -80,5 +111,19 @@ footer {
 .credits {
     font-size: 0.75em;
     font-weight: 300;
-    color: rgb(255, 255, 255);
+    color: lightgrey;
+}
+
+.facebook-link {
+    color: lightgrey ;
+    text-decoration: none;
+}
+
+.facebook-link:visited {
+    color: lightgrey;
+}
+
+.facebook-link:hover {
+    color: white;
+    text-decoration: underline;
 }
