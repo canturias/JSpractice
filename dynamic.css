@@ -1,0 +1,5 @@
+.red-border {
+    border-style: solid;
+    border-color: rgb(194, 12, 12);
+    transition: 1s ease;
+}

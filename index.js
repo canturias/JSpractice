@@ -2,18 +2,38 @@ function isWhitespace(string) {
     return /^\s*$/.test(string);
   }
 
-// Welcome
+// Login
 let username;
 document.getElementById("submit").onclick = function() {
-    username = document.getElementById("username").value;
+    username = document.getElementById("username").value.trim();
     if (isWhitespace(username)) {
         document.getElementById("welcome").textContent = `Welcome`;
     }
     else {
         document.getElementById("welcome").textContent = `Welcome, ${username}!`;
-    }
-    
+    } 
 }
+
+document.getElementById("submit").addEventListener('click', function() {
+    const loginElement = document.getElementById('login');
+    if (username != "") {
+        loginElement.remove();
+    }
+    else {
+        const redBorder = document.getElementById("username");
+        redBorder.classList.add('red-border');
+    }
+});
+
+document.getElementById("username").addEventListener('click', function() {
+    const blackBorder = document.getElementById("username");
+    blackBorder.classList.remove('red-border');
+});
+
+document.getElementById("username").addEventListener('focus', function() {
+    const blackBorder = document.getElementById("username");
+    blackBorder.classList.remove('red-border');
+});
 
 // Area Calculator
 let length, width;
@@ -22,12 +42,11 @@ document.getElementById("areaButton").onclick = function() {
     width = parseFloat(document.getElementById("width").value);
     let area = length * width;
     if (isNaN(length) || isNaN(width)) {
-        document.getElementById("area").textContent = `Area Calculator — Error`;
+        document.getElementById("area").textContent = `Area Calculator: Error`;
     }
     else {
-        document.getElementById("area").textContent = `Area Calculator — ${area.toFixed(2)}`;
-    }
-    
+        document.getElementById("area").textContent = `Area Calculator: ${area.toFixed(2)}`;
+    } 
 }
 
 // Celsisus to Fahrenheit to Celsius
@@ -53,10 +72,10 @@ function checkSelected() {
         document.getElementById("tempButton").onclick = function() {
             tempResult = (tempInput * 9 / 5) + 32;
             if (isNaN(tempInput)) {
-                document.getElementById("tempTitle").textContent = `Celsius to Fahrenheit — Error`;
+                document.getElementById("tempTitle").textContent = `Celsius to Fahrenheit: Error`;
             }
             else {
-                document.getElementById("tempTitle").textContent = `Celsius to Fahrenheit — ${tempResult.toFixed(2)}\u00B0F`;
+                document.getElementById("tempTitle").textContent = `Celsius to Fahrenheit: ${tempResult.toFixed(2)}\u00B0F`;
             }
         }      
     } else if (ftcRadio.checked) {
@@ -66,10 +85,10 @@ function checkSelected() {
         document.getElementById("tempButton").onclick = function() {
             tempResult = (tempInput - 32) * 5 / 9;
             if (isNaN(tempInput)) {
-                document.getElementById("tempTitle").textContent = `Celsius to Fahrenheit — Error`;
+                document.getElementById("tempTitle").textContent = `Celsius to Fahrenheit: Error`;
             }
             else {
-                document.getElementById("tempTitle").textContent = `Fahrenheit to Celsius — ${tempResult.toFixed(2)}\u00B0C`;
+                document.getElementById("tempTitle").textContent = `Fahrenheit to Celsius: ${tempResult.toFixed(2)}\u00B0C`;
             } 
         }
     }
@@ -82,19 +101,19 @@ const resetButton = document.getElementById("resetButton");
 const counterTitle = document.getElementById("counterTitle");
 
 let counter = 0;
-document.getElementById("counterTitle").textContent = `Counter — ${counter}`
+document.getElementById("counterTitle").textContent = `Counter: ${counter}`
 
 increaseButton.onclick = function() {
     counter++;
-    counterTitle.textContent = `Counter — ${counter}`
+    counterTitle.textContent = `Counter: ${counter}`
 }
 decreaseButton.onclick = function() {
     counter--;
-    counterTitle.textContent = `Counter — ${counter}`
+    counterTitle.textContent = `Counter: ${counter}`
 }
 resetButton.onclick = function() {
     counter = 0;
-    counterTitle.textContent = `Counter — ${counter}`
+    counterTitle.textContent = `Counter: ${counter}`
 }
 
 // Random Whole Number Generator
@@ -114,11 +133,11 @@ function checkMaximumNumber() {
 
 document.getElementById("numberGeneratorButton").onclick = function() {
     if (minimumNumber > maximumNumber) {
-        document.getElementById("numberGeneratorTitle").textContent = `Random Whole Number Generator — Invalid`;
+        document.getElementById("numberGeneratorTitle").textContent = `Random Whole Number Generator: Invalid`;
     }
     else {
         let randomNumber = Math.floor(Math.random() * (maximumNumber - minimumNumber + 1)) + minimumNumber;
-        document.getElementById("numberGeneratorTitle").textContent = `Random Whole Number Generator — ${randomNumber}`;
+        document.getElementById("numberGeneratorTitle").textContent = `Random Whole Number Generator: ${randomNumber}`;
     }
 }
 
@@ -133,19 +152,19 @@ document.getElementById("diceRollerButton").onclick = function() {
     if (die1 === die2 && die1 !== 6) {
         diceScore++;
         document.getElementById("diceTitle").style.color = "green";
-        document.getElementById("diceTitle").textContent = `Two of a Kind — ${die1} and ${die2}`;
+        document.getElementById("diceTitle").textContent = `Two of a Kind:\n ${die1}\u00A0and\u00A0${die2}`;
         document.getElementById("diceScore").textContent = `Score: ${diceScore}`;
         document.getElementById("dicePlus").textContent = `(+1)`;
     }
     else if (die1 === 6 && die2 ===6) {
         diceScore += 3;
         document.getElementById("diceTitle").style.color = "cornflowerblue";
-        document.getElementById("diceTitle").textContent = `Two of a Kind — ${die1} and ${die2} (Double Six!)`;
+        document.getElementById("diceTitle").textContent = `Two of a Kind:\n ${die1}\u00A0and\u00A0${die2}\u00A0`;
         document.getElementById("diceScore").textContent = `Score: ${diceScore}`;
         document.getElementById("dicePlus").textContent = `(+3)`;
     }
     else {
-        document.getElementById("diceTitle").textContent = `Two of a Kind — ${die1} and ${die2}`;
+        document.getElementById("diceTitle").textContent = `Two of a Kind:\n ${die1}\u00A0and\u00A0${die2}`;
     }
 }
 
